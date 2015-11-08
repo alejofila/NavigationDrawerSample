@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/lbl_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/lbl_name"
+        android:textSize="20sp"
+
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lbl_name"
+        android:layout_toRightOf="@+id/lbl_name"
+        android:text="preuba"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/lbl_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_name"
+        android:layout_marginRight="5dp"
+        android:text="@string/lbl_user"
+        android:textSize="20sp"
+
+        android:textStyle="bold"
+
+
+        />
+
+    <TextView
+        android:id="@+id/txt_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lbl_user"
+        android:layout_toRightOf="@+id/lbl_user"
+        android:text="preuba"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/lbl_email"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbl_user"
+        android:layout_marginRight="5dp"
+        android:text="@string/lbl_email"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        />
+
+
+    <TextView
+        android:id="@+id/txt_email"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lbl_email"
+        android:layout_toRightOf="@+id/lbl_email"
+        android:text="preuba"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/lbl_phone"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbl_email"
+        android:layout_marginRight="5dp"
+        android:text="@string/lbl_phone"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        />
+
+    <TextView
+        android:id="@+id/txt_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/lbl_phone"
+        android:layout_toRightOf="@+id/lbl_phone"
+        android:text="preuba"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/lbl_company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_phone"
+        android:layout_marginRight="5dp"
+        android:text="@string/lbl_company"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+
+        />
+
+
+    <TextView
+        android:id="@+id/txt_company"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lbl_company"
+        android:layout_toRightOf="@+id/lbl_company"
+        android:text="preuba"
+        android:textSize="20sp" />
+
+
+</RelativeLayout>

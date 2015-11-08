@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">NavigationDrawerSample</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="wrong_login">The username and the password aren\'t valid, try with \'usuario\' in both</string>
+    <string name="lbl_name">Name:</string>
+    <string name="lbl_email">Email:</string>
+    <string name="lbl_user">User:</string>
+    <string name="lbl_phone">Phone:</string>
+    <string name="lbl_company">Company:</string>
+    <string name="nav_sign_out">Sign out</string>
+    <string name="nav_user">User</string>
+    <string name="nav_gallery">Albums</string>
+    <string name="nav_posts">Posts</string>
+    <string name="welcome_message">Welcome user!</string>
+    <string name="post_transitions">post_transition</string>
+    <string name="lbl_comments">Comments</string>
+    <string name="connection_error">You dont have a good connection, try again later</string>
+    <string name="login_label">Login</string>
+</resources>
