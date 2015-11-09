@@ -1,10 +1,10 @@
 package com.example.alejandro.navigationdrawersample.ui.fragment;
 
-import android.graphics.drawable.GradientDrawable;
+
 import android.os.Bundle;
 import android.os.Handler;
-import android.provider.Contacts;
 import android.support.annotation.Nullable;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -83,7 +83,7 @@ public class PhotosFragment extends Fragment{
     }
 
     private void setPhotos(Photo[] photos) {
-        PhotosAdapter adapter = new PhotosAdapter(photos,getActivity());
+        PhotosAdapter adapter = new PhotosAdapter(photos,getActivity(),mOnPhotoClickedListener);
         GridLayoutManager layoutManager = new GridLayoutManager(getContext(),4, GridLayoutManager.VERTICAL,false);
         lstPhotos.setLayoutManager(layoutManager);
         lstPhotos.setHasFixedSize(true);
@@ -99,4 +99,12 @@ public class PhotosFragment extends Fragment{
         return fragment;
 
     }
+    PhotosAdapter.OnPhotoClickedListener mOnPhotoClickedListener = new PhotosAdapter.OnPhotoClickedListener() {
+        @Override
+        public void onPhotoClicked(Photo photo) {
+            DialogFragment fragment = SinglePhotoDialogFragment.newInstance(photo.getUrl());
+            fragment.show(getFragmentManager(),"FullScreenPhoto");
+
+        }
+    };
 }

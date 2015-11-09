@@ -15,4 +15,5 @@ public class Constants {
     public static final String KEY_POST_TITLE = "post_title";
     public static final String KEY_POST_BODY = "post_body";
     public static final String KEY_ALBUM_ID = "album_id";
+    public static final String KEY_PHOTO_URL ="photo_url";
 }

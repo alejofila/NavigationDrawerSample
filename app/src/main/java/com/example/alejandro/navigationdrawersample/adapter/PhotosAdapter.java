@@ -13,6 +13,7 @@ import com.squareup.picasso.Picasso;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by Alejandro on 8/11/2015.
@@ -20,12 +21,15 @@ import butterknife.ButterKnife;
 public class PhotosAdapter  extends RecyclerView.Adapter<PhotosAdapter.PhotoHolder>{
 
 
-    public PhotosAdapter(Photo[] photos, Context context){
+    public PhotosAdapter(Photo[] photos, Context context ,OnPhotoClickedListener mOnPhotoClickedListener)
+    {
         this.photos = photos;
         this.context = context;
+        this.mOnPhotoClickedListener = mOnPhotoClickedListener;
     }
     private Photo photos[];
     private Context context;
+    private OnPhotoClickedListener mOnPhotoClickedListener;
 
 
     @Override
@@ -36,11 +40,19 @@ public class PhotosAdapter  extends RecyclerView.Adapter<PhotosAdapter.PhotoHold
     }
 
     @Override
-    public void onBindViewHolder(PhotoHolder holder, int position) {
-        Picasso.with(context).load(photos[position].getUrl())
+    public void onBindViewHolder(PhotoHolder holder, final int position) {
+        Picasso.with(context).load(photos[position].getThumbnailUrl())
                 .placeholder(R.drawable.ic_loading)
                 .fit()
                 .into(holder.photo);
+        holder.photo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mOnPhotoClickedListener.onPhotoClicked(photos[position]);
+
+            }
+        });
+
 
     }
 
@@ -53,9 +65,14 @@ public class PhotosAdapter  extends RecyclerView.Adapter<PhotosAdapter.PhotoHold
         @Bind(value = R.id.img_photo)
         protected ImageView photo;
 
+
+
         public PhotoHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this,itemView);
         }
+    }
+    public interface OnPhotoClickedListener {
+        public void onPhotoClicked(Photo photo);
     }
 }

@@ -1,3 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">NavigationDrawerSample</string>
+    <string name="navigation_drawer_open">Abrir navigation drawer</string>
+    <string name="navigation_drawer_close">Cerrar navigation drawer</string>
+    <string name="action_settings">Opciones</string>
+    <string name="username">Nombre usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Ingresar</string>
+    <string name="wrong_login">Los datos de ingreso son errados prueba con \'usuario\' en los dos campos</string>
+    <string name="lbl_name">Nombre:</string>
+    <string name="lbl_email">Email:</string>
+    <string name="lbl_user">Nombre usuario:</string>
+    <string name="lbl_phone">Telefono:</string>
+    <string name="lbl_company">Compania:</string>
+    <string name="nav_gallery">Albums</string>
+    <string name="nav_sign_out">Cerrar sesión</string>
+    <string name="nav_user">Usuario</string>
+    <string name="welcome_message">Bienvenido Usuario</string>
+    <string name="lbl_comments">Comentarios</string>
+    <string name="connection_error">No tienes una buena conexión intentalo luego</string>
+    <string name="login_label">Ingreso</string>
 </resources>
