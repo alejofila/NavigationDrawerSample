@@ -81,12 +81,10 @@ public class PostCommentsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_post_comments, container, false);
         ButterKnife.bind(this, view);
         mHandler = new Handler();
-        String myTransitionName = getArguments().getString(Constants.KEY_TRANSITION_NAME_POST);
         int postId = getArguments().getInt(Constants.KEY_POST_ID);
         setPostData(getArguments());
         progressBar.setVisibility(View.VISIBLE);
         loadPostComments(postId);
-        postLL.setTransitionName(myTransitionName);
         return view;
     }
 
@@ -147,11 +145,10 @@ public class PostCommentsFragment extends Fragment {
         ButterKnife.unbind(this);
     }
 
-    public static PostCommentsFragment newInstance(String transitionName, int postId,String postTitle, String postBody) {
+    public static PostCommentsFragment newInstance( int postId,String postTitle, String postBody) {
         PostCommentsFragment myFragment = new PostCommentsFragment();
 
         Bundle args = new Bundle();
-        args.putString(Constants.KEY_TRANSITION_NAME_POST, transitionName);
         args.putString(Constants.KEY_POST_TITLE,postTitle);
         args.putString(Constants.KEY_POST_BODY,postBody);
         args.putInt(Constants.KEY_POST_ID, postId);

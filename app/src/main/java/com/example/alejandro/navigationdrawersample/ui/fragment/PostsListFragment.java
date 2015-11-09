@@ -59,8 +59,8 @@ public class PostsListFragment extends Fragment {
     private Handler mHandler;
     private PostAdapter.OnPostClickedCallback mOnPostClickedCallback = new PostAdapter.OnPostClickedCallback() {
         @Override
-        public void onPostClicked(Post clickedPost, String transitionName, View sharedView) {
-            Fragment postCommentsFragment = PostCommentsFragment.newInstance("x",clickedPost.getId(),clickedPost.getTitle(),clickedPost.getBody());
+        public void onPostClicked(Post clickedPost, View sharedView) {
+            Fragment postCommentsFragment = PostCommentsFragment.newInstance(clickedPost.getId(),clickedPost.getTitle(),clickedPost.getBody());
             FragmentManager fm = PostsListFragment.this.getFragmentManager();
             fm.beginTransaction()
             .setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right,android.R.anim.fade_in,android.R.anim.fade_out)

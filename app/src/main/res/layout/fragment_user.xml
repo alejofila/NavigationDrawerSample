@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/lbl_name"
         android:layout_toRightOf="@+id/lbl_name"
-        android:text="preuba"
+        android:text="@string/loading"
         android:textSize="20sp" />
 
     <TextView
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/lbl_user"
         android:layout_toRightOf="@+id/lbl_user"
-        android:text="preuba"
+        android:text="@string/loading"
         android:textSize="20sp" />
 
     <TextView
@@ -69,7 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/lbl_email"
         android:layout_toRightOf="@+id/lbl_email"
-        android:text="preuba"
+        android:text="@string/loading"
         android:textSize="20sp" />
 
     <TextView
@@ -91,7 +91,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@id/lbl_phone"
         android:layout_toRightOf="@+id/lbl_phone"
-        android:text="preuba"
+        android:text="@string/loading"
         android:textSize="20sp" />
 
     <TextView
@@ -115,7 +115,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/lbl_company"
         android:layout_toRightOf="@+id/lbl_company"
-        android:text="preuba"
+        android:text="@string/loading"
         android:textSize="20sp" />
 
 

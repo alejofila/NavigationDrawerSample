@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.alejandro.navigationdrawersample.R;
@@ -45,8 +46,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostHolder> {
         holder.mainContainer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                holder.mainContainer.setTransitionName("post_transition" + posts[position].getId());
-                callback.onPostClicked(posts[position], holder.mainContainer.getTransitionName(), v);
+                callback.onPostClicked(posts[position], v);
 
             }
         });
@@ -76,7 +76,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostHolder> {
     }
 
     public interface OnPostClickedCallback {
-        public void onPostClicked(Post p, String transitionName, View v);
+        public void onPostClicked(Post p, View v);
     }
 
 

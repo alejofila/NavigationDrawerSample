@@ -31,21 +31,25 @@ import com.example.alejandro.navigationdrawersample.ui.fragment.PostsListFragmen
 import com.example.alejandro.navigationdrawersample.ui.fragment.UserFragment;
 import com.example.alejandro.navigationdrawersample.ui.fragment.WelcomeFragment;
 import com.example.alejandro.navigationdrawersample.util.Constants;
+import com.kogitune.activity_transition.ActivityTransition;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
-        OnFragmentChanged,
-        OnPostClickedCallback {
+        OnFragmentChanged
+         {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        ActivityTransition.with(getIntent()).to(drawer).start(savedInstanceState);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
@@ -121,15 +125,5 @@ public class MainActivity extends AppCompatActivity
         setTitle(newTitle);
     }
 
-    @Override
-    public void onPostClicked(Post p, String transitionName, View sharedView) {
-        Fragment postCommentsFragment = new PostCommentsFragment();
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        //ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
-        ft.replace(R.id.fragment_container, postCommentsFragment);
-        ft.addToBackStack(null);
-        ft.commit();
 
-    }
 }
