@@ -20,4 +20,6 @@
     <string name="lbl_comments">Comentarios</string>
     <string name="connection_error">No tienes una buena conexión intentalo luego</string>
     <string name="login_label">Ingreso</string>
+    <string name="loading">Cargando...</string>
+
 </resources>
