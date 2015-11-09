@@ -103,6 +103,7 @@ public class PhotosFragment extends Fragment{
         @Override
         public void onPhotoClicked(Photo photo) {
             DialogFragment fragment = SinglePhotoDialogFragment.newInstance(photo.getUrl());
+            fragment.setStyle(DialogFragment.STYLE_NO_FRAME,0);
             fragment.show(getFragmentManager(),"FullScreenPhoto");
 
         }
